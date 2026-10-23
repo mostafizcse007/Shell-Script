@@ -1,0 +1,4 @@
+username,group,shell,home_dir,sudo_flag,initial_password
+alice,developers,/bin/bash,/home/alice,yes,InitPass@Alice123
+bob,testers,/bin/bash,/home/bob,no,InitPass@Bob456
+charlie,devops,/bin/bash,/home/charlie,yes,InitPass@Charlie789

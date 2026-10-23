@@ -1,0 +1,384 @@
+[ERROR] [2026-10-24 01:50:34] Module not found: /d/OS Project/lib/modules/monitor.sh
+[INFO] [2026-10-24 01:50:54] Running monitor diagnostic in DRY-RUN mode...
+[WARN] [2026-10-24 01:50:57] [DRY-RUN] Threshold breach detected. Simulated alert: Resource threshold breach on MOSTAFIZ - CPU: 100.0%, MEM: 80.6%, DISK: 64%
+[INFO] [2026-10-24 01:51:53] Preparing L0 backup of '/d/OS Project/lib' -> '/d/OS Project/test_bk/backup_lib_L0_20261024_015153.tar.gz'...
+[INFO] [2026-10-24 01:51:53] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 01:51:53] [DRY-RUN] Would create archive: /d/OS Project/test_bk/backup_lib_L0_20261024_015153.tar.gz
+[INFO] [2026-10-24 01:51:53] [DRY-RUN] Engine: GNU Tar (Snapshot SNAR: /d/OS Project/test_bk/.snapshot.snar)
+[INFO] [2026-10-24 01:51:53] [DRY-RUN] Would compute SHA-256 and register in /d/OS Project/test_bk/SHA256SUMS
+[INFO] [2026-10-24 01:51:53] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 01:51:53] Found 0 Level-0 base backup chain(s).
+[INFO] [2026-10-24 01:51:53] Backup count (0) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 01:51:53] Backup job finished successfully.
+[INFO] [2026-10-24 01:52:02] Preparing L0 backup of '/d/OS Project/lib' -> '/d/OS Project/test_bk/backup_lib_L0_20261024_015202.tar.gz'...
+[INFO] [2026-10-24 01:52:02] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 01:52:03] Backup created successfully: backup_lib_L0_20261024_015202.tar.gz (Size: 4025 bytes)
+[INFO] [2026-10-24 01:52:03] SHA-256 Registered: 6504a2117a87c9632401c8562b7af3db4cea1a2d26e30e0aac62b3e50067e7ff
+[INFO] [2026-10-24 01:52:03] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 01:52:03] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 01:52:03] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 01:52:03] Backup job finished successfully.
+[INFO] [2026-10-24 01:52:04] Preparing L1 backup of '/d/OS Project/lib' -> '/d/OS Project/test_bk/backup_lib_L1_20261024_015204.tar.gz'...
+[INFO] [2026-10-24 01:52:04] Creating Level-1 Incremental Backup...
+[INFO] [2026-10-24 01:52:05] Backup created successfully: backup_lib_L1_20261024_015204.tar.gz (Size: 142 bytes)
+[INFO] [2026-10-24 01:52:05] SHA-256 Registered: 32989247e7b23eb8e34e2821cdf7d0506bc87a1c4900e330db4aff76b441ecbc
+[INFO] [2026-10-24 01:52:05] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 01:52:05] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 01:52:05] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 01:52:05] Backup job finished successfully.
+[INFO] [2026-10-24 01:53:48] Reading CSV file: examples/users.csv (Dry-run: true, Deprovision: false)...
+[INFO] [2026-10-24 01:54:28] Reading CSV file: examples/users.csv (Dry-run: true, Deprovision: false)...
+[INFO] [2026-10-24 01:54:28] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 01:54:29] Processing user: 'alice' [Group: developers, Shell: /bin/bash, Home: /home/alice, Sudo: true]
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Primary group 'developers' does not exist. Would execute: groupadd developers
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would execute: useradd -m -g 'developers' -s '/bin/bash' -d '/home/alice' 'alice'
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would configure initial password for 'alice'
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would grant administrative/sudo privileges to 'alice'
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would set directory permissions (chmod 750 '/home/alice')
+[INFO] [2026-10-24 01:54:29] Processing user: 'bob' [Group: testers, Shell: /bin/bash, Home: /home/bob, Sudo: false]
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Primary group 'testers' does not exist. Would execute: groupadd testers
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would execute: useradd -m -g 'testers' -s '/bin/bash' -d '/home/bob' 'bob'
+[INFO] [2026-10-24 01:54:29] [DRY-RUN] Would configure initial password for 'bob'
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Would set directory permissions (chmod 750 '/home/bob')
+[INFO] [2026-10-24 01:54:30] Processing user: 'charlie' [Group: devops, Shell: /bin/bash, Home: /home/charlie, Sudo: true]
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Primary group 'devops' does not exist. Would execute: groupadd devops
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Would execute: useradd -m -g 'devops' -s '/bin/bash' -d '/home/charlie' 'charlie'
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Would configure initial password for 'charlie'
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Would grant administrative/sudo privileges to 'charlie'
+[INFO] [2026-10-24 01:54:30] [DRY-RUN] Would set directory permissions (chmod 750 '/home/charlie')
+[INFO] [2026-10-24 01:54:30] User provisioning task completed.
+[INFO] [2026-10-24 01:54:37] Reading CSV file: examples/users.csv (Dry-run: true, Deprovision: true)...
+[INFO] [2026-10-24 01:54:38] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 01:54:38] Deprovisioning account for: 'alice'
+[INFO] [2026-10-24 01:54:38] User 'alice' does not exist. Nothing to remove.
+[INFO] [2026-10-24 01:54:38] Deprovisioning account for: 'bob'
+[INFO] [2026-10-24 01:54:38] User 'bob' does not exist. Nothing to remove.
+[INFO] [2026-10-24 01:54:39] Deprovisioning account for: 'charlie'
+[INFO] [2026-10-24 01:54:39] User 'charlie' does not exist. Nothing to remove.
+[INFO] [2026-10-24 01:54:39] User provisioning task completed.
+[INFO] [2026-10-24 01:55:02] Running monitor diagnostic in DRY-RUN mode...
+[WARN] [2026-10-24 01:55:06] [DRY-RUN] Threshold breach detected. Simulated alert: Resource threshold breach on MOSTAFIZ - CPU: 100.0%, MEM: 83.1%, DISK: 64%
+[INFO] [2026-10-24 01:55:07] Preparing L0 backup of '/d/OS Project/lib' -> '/d/OS Project/test_dest/backup_lib_L0_20261024_015507.tar.gz'...
+[INFO] [2026-10-24 01:55:07] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 01:55:07] [DRY-RUN] Would create archive: /d/OS Project/test_dest/backup_lib_L0_20261024_015507.tar.gz
+[INFO] [2026-10-24 01:55:07] [DRY-RUN] Engine: GNU Tar (Snapshot SNAR: /d/OS Project/test_dest/.snapshot.snar)
+[INFO] [2026-10-24 01:55:07] [DRY-RUN] Would compute SHA-256 and register in /d/OS Project/test_dest/SHA256SUMS
+[INFO] [2026-10-24 01:55:07] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 01:55:07] Found 0 Level-0 base backup chain(s).
+[INFO] [2026-10-24 01:55:07] Backup count (0) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 01:55:07] Backup job finished successfully.
+[INFO] [2026-10-24 01:55:08] Scanning '/d/OS Project/lib' for files to organize...
+[INFO] [2026-10-24 01:55:09] [DRY-RUN] Would move: 'logger.sh' -> 'Code/logger.sh'
+[INFO] [2026-10-24 01:55:09] [DRY-RUN] Would move: 'utils.sh' -> 'Code/utils.sh'
+[INFO] [2026-10-24 01:55:09] File organization completed. Total files processed: 2
+[INFO] [2026-10-24 01:55:09] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 01:55:10] Reading CSV file: examples/users.csv (Dry-run: true, Deprovision: false)...
+[INFO] [2026-10-24 01:55:10] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 01:55:10] Processing user: 'alice' [Group: developers, Shell: /bin/bash, Home: /home/alice, Sudo: true]
+[INFO] [2026-10-24 01:55:10] [DRY-RUN] Primary group 'developers' does not exist. Would execute: groupadd developers
+[INFO] [2026-10-24 01:55:10] [DRY-RUN] Would execute: useradd -m -g 'developers' -s '/bin/bash' -d '/home/alice' 'alice'
+[INFO] [2026-10-24 01:55:10] [DRY-RUN] Would configure initial password for 'alice'
+[INFO] [2026-10-24 01:55:10] [DRY-RUN] Would grant administrative/sudo privileges to 'alice'
+[INFO] [2026-10-24 01:55:10] [DRY-RUN] Would set directory permissions (chmod 750 '/home/alice')
+[INFO] [2026-10-24 01:55:11] Processing user: 'bob' [Group: testers, Shell: /bin/bash, Home: /home/bob, Sudo: false]
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Primary group 'testers' does not exist. Would execute: groupadd testers
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Would execute: useradd -m -g 'testers' -s '/bin/bash' -d '/home/bob' 'bob'
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Would configure initial password for 'bob'
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Would set directory permissions (chmod 750 '/home/bob')
+[INFO] [2026-10-24 01:55:11] Processing user: 'charlie' [Group: devops, Shell: /bin/bash, Home: /home/charlie, Sudo: true]
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Primary group 'devops' does not exist. Would execute: groupadd devops
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Would execute: useradd -m -g 'devops' -s '/bin/bash' -d '/home/charlie' 'charlie'
+[INFO] [2026-10-24 01:55:11] [DRY-RUN] Would configure initial password for 'charlie'
+[INFO] [2026-10-24 01:55:12] [DRY-RUN] Would grant administrative/sudo privileges to 'charlie'
+[INFO] [2026-10-24 01:55:12] [DRY-RUN] Would set directory permissions (chmod 750 '/home/charlie')
+[INFO] [2026-10-24 01:55:12] User provisioning task completed.
+[ERROR] [2026-10-24 02:00:12] Unknown command: 'non_existent_command'
+[INFO] [2026-10-24 02:00:18] Running monitor diagnostic in DRY-RUN mode...
+[WARN] [2026-10-24 02:00:21] [DRY-RUN] Threshold breach detected. Simulated alert: Resource threshold breach on MOSTAFIZ - CPU: 100.0%, MEM: 78.5%, DISK: 64%
+[INFO] [2026-10-24 02:00:22] Preparing L0 backup of '/tmp/test_suite-FsMZ9t/backup_src' -> '/tmp/test_suite-FsMZ9t/backup_dest/backup_backup_src_L0_20261024_020022.tar.gz'...
+[INFO] [2026-10-24 02:00:22] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:00:22] Backup created successfully: backup_backup_src_L0_20261024_020022.tar.gz (Size: 212 bytes)
+[INFO] [2026-10-24 02:00:22] SHA-256 Registered: d7bbb6b43b2e9619c2dd34aedb5762b5962432847bc5e58414db2c133c48b387
+[INFO] [2026-10-24 02:00:22] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:00:23] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:00:23] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:00:23] Backup job finished successfully.
+[INFO] [2026-10-24 02:00:24] Verifying archive: backup_backup_src_L0_20261024_020022.tar.gz...
+[INFO] [2026-10-24 02:00:24] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:00:24] Computed SHA-256: d7bbb6b43b2e9619c2dd34aedb5762b5962432847bc5e58414db2c133c48b387
+[INFO] [2026-10-24 02:00:24] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-FsMZ9t/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:00:24] Verification PASSED for backup_backup_src_L0_20261024_020022.tar.gz.
+[INFO] [2026-10-24 02:00:27] Preparing L1 backup of '/tmp/test_suite-FsMZ9t/backup_src' -> '/tmp/test_suite-FsMZ9t/backup_dest/backup_backup_src_L1_20261024_020026.tar.gz'...
+[INFO] [2026-10-24 02:00:27] Creating Level-1 Incremental Backup...
+[INFO] [2026-10-24 02:00:27] Backup created successfully: backup_backup_src_L1_20261024_020026.tar.gz (Size: 209 bytes)
+[INFO] [2026-10-24 02:00:27] SHA-256 Registered: 08195029d84f3a2cd045a26f369927cda7c2a259f89d765014f0a8aafec87745
+[INFO] [2026-10-24 02:00:27] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:00:27] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:00:27] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:00:27] Backup job finished successfully.
+[INFO] [2026-10-24 02:00:28] Verifying archive: backup_backup_src_L1_20261024_020026.tar.gz...
+[INFO] [2026-10-24 02:00:29] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:00:29] Computed SHA-256: 08195029d84f3a2cd045a26f369927cda7c2a259f89d765014f0a8aafec87745
+[INFO] [2026-10-24 02:00:29] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-FsMZ9t/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:00:29] Verification PASSED for backup_backup_src_L1_20261024_020026.tar.gz.
+[INFO] [2026-10-24 02:00:30] Preparing L0 backup of '/tmp/test_suite-FsMZ9t/backup_src' -> '/tmp/test_suite-FsMZ9t/dry_dest/backup_backup_src_L0_20261024_020030.tar.gz'...
+[INFO] [2026-10-24 02:00:30] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:00:30] [DRY-RUN] Would create archive: /tmp/test_suite-FsMZ9t/dry_dest/backup_backup_src_L0_20261024_020030.tar.gz
+[INFO] [2026-10-24 02:00:30] [DRY-RUN] Engine: GNU Tar (Snapshot SNAR: /tmp/test_suite-FsMZ9t/dry_dest/.snapshot.snar)
+[INFO] [2026-10-24 02:00:30] [DRY-RUN] Would compute SHA-256 and register in /tmp/test_suite-FsMZ9t/dry_dest/SHA256SUMS
+[INFO] [2026-10-24 02:00:30] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:00:30] Found 0 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:00:30] Backup count (0) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:00:30] Backup job finished successfully.
+[ERROR] [2026-10-24 02:00:59] Unknown command: 'non_existent_command'
+[INFO] [2026-10-24 02:01:05] Running monitor diagnostic in DRY-RUN mode...
+[WARN] [2026-10-24 02:01:08] [DRY-RUN] Threshold breach detected. Simulated alert: Resource threshold breach on MOSTAFIZ - CPU: 100.0%, MEM: 78.8%, DISK: 64%
+[INFO] [2026-10-24 02:01:09] Preparing L0 backup of '/tmp/test_suite-7rCkH3/backup_src' -> '/tmp/test_suite-7rCkH3/backup_dest/backup_backup_src_L0_20261024_020109.tar.gz'...
+[INFO] [2026-10-24 02:01:09] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:01:10] Backup created successfully: backup_backup_src_L0_20261024_020109.tar.gz (Size: 210 bytes)
+[INFO] [2026-10-24 02:01:10] SHA-256 Registered: df986ede92b6418e649eaf292ca2aaab3415555fa21b954a21130c11881f4df5
+[INFO] [2026-10-24 02:01:10] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:01:10] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:01:10] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:01:10] Backup job finished successfully.
+[INFO] [2026-10-24 02:01:11] Verifying archive: backup_backup_src_L0_20261024_020109.tar.gz...
+[INFO] [2026-10-24 02:01:11] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:01:11] Computed SHA-256: df986ede92b6418e649eaf292ca2aaab3415555fa21b954a21130c11881f4df5
+[INFO] [2026-10-24 02:01:12] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-7rCkH3/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:01:12] Verification PASSED for backup_backup_src_L0_20261024_020109.tar.gz.
+[INFO] [2026-10-24 02:01:14] Preparing L1 backup of '/tmp/test_suite-7rCkH3/backup_src' -> '/tmp/test_suite-7rCkH3/backup_dest/backup_backup_src_L1_20261024_020114.tar.gz'...
+[INFO] [2026-10-24 02:01:14] Creating Level-1 Incremental Backup...
+[INFO] [2026-10-24 02:01:15] Backup created successfully: backup_backup_src_L1_20261024_020114.tar.gz (Size: 211 bytes)
+[INFO] [2026-10-24 02:01:15] SHA-256 Registered: 0db429e5aff27a4e076801bae5cfb92089c3ebf7f2fa3a5e7eb700d2fb40c2e3
+[INFO] [2026-10-24 02:01:15] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:01:15] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:01:15] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:01:15] Backup job finished successfully.
+[INFO] [2026-10-24 02:01:16] Verifying archive: backup_backup_src_L1_20261024_020114.tar.gz...
+[INFO] [2026-10-24 02:01:16] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:01:17] Computed SHA-256: 0db429e5aff27a4e076801bae5cfb92089c3ebf7f2fa3a5e7eb700d2fb40c2e3
+[INFO] [2026-10-24 02:01:17] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-7rCkH3/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:01:17] Verification PASSED for backup_backup_src_L1_20261024_020114.tar.gz.
+[INFO] [2026-10-24 02:01:18] Preparing L0 backup of '/tmp/test_suite-7rCkH3/backup_src' -> '/tmp/test_suite-7rCkH3/dry_dest/backup_backup_src_L0_20261024_020118.tar.gz'...
+[INFO] [2026-10-24 02:01:18] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:01:18] [DRY-RUN] Would create archive: /tmp/test_suite-7rCkH3/dry_dest/backup_backup_src_L0_20261024_020118.tar.gz
+[INFO] [2026-10-24 02:01:18] [DRY-RUN] Engine: GNU Tar (Snapshot SNAR: /tmp/test_suite-7rCkH3/dry_dest/.snapshot.snar)
+[INFO] [2026-10-24 02:01:18] [DRY-RUN] Would compute SHA-256 and register in /tmp/test_suite-7rCkH3/dry_dest/SHA256SUMS
+[INFO] [2026-10-24 02:01:18] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:01:18] Found 0 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:01:18] Backup count (0) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:01:18] Backup job finished successfully.
+[INFO] [2026-10-24 02:01:20] Scanning '/tmp/test_suite-7rCkH3/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:01:20] [DRY-RUN] Would move: 'analytics_script.py' -> 'Code/analytics_script.py'
+[INFO] [2026-10-24 02:01:20] [DRY-RUN] Would move: 'app_active.log' -> 'Miscellaneous/app_active.log'
+[INFO] [2026-10-24 02:01:21] [DRY-RUN] Would move: 'architecture_diagram.png' -> 'Images/architecture_diagram.png'
+[INFO] [2026-10-24 02:01:21] [DRY-RUN] Would move: 'backup_stub.tar.gz' -> 'Archives/backup_stub.tar.gz'
+[INFO] [2026-10-24 02:01:21] [DRY-RUN] Would move: 'config.json' -> 'Code/config.json'
+[INFO] [2026-10-24 02:01:21] [DRY-RUN] Would move: 'data_export.csv' -> 'Documents/data_export.csv'
+[INFO] [2026-10-24 02:01:22] [DRY-RUN] Would move: 'demo_clip.mp4' -> 'Media/demo_clip.mp4'
+[INFO] [2026-10-24 02:01:22] [DRY-RUN] Would move: 'helper.sh' -> 'Code/helper.sh'
+[INFO] [2026-10-24 02:01:22] [DRY-RUN] Would move: 'icon_vector.svg' -> 'Images/icon_vector.svg'
+[INFO] [2026-10-24 02:01:22] [DRY-RUN] Would move: 'lecture_notes.docx' -> 'Documents/lecture_notes.docx'
+[INFO] [2026-10-24 02:01:22] [DRY-RUN] Would move: 'legacy_audit_archive.log' -> 'Miscellaneous/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:01:23] [DRY-RUN] Would move: 'main.c' -> 'Code/main.c'
+[INFO] [2026-10-24 02:01:23] [DRY-RUN] Would move: 'old_dataset.zip' -> 'Archives/old_dataset.zip'
+[INFO] [2026-10-24 02:01:23] [DRY-RUN] Would move: 'oversized_transaction.log' -> 'Miscellaneous/oversized_transaction.log'
+[INFO] [2026-10-24 02:01:23] [DRY-RUN] Would move: 'podcast_recording.mp3' -> 'Media/podcast_recording.mp3'
+[INFO] [2026-10-24 02:01:24] [DRY-RUN] Would move: 'project_spec.md' -> 'Documents/project_spec.md'
+[INFO] [2026-10-24 02:01:24] [DRY-RUN] Would move: 'quarterly_report.pdf' -> 'Documents/quarterly_report.pdf'
+[INFO] [2026-10-24 02:01:24] [DRY-RUN] Would move: 'screenshot_mock.jpg' -> 'Images/screenshot_mock.jpg'
+[INFO] [2026-10-24 02:01:24] [DRY-RUN] Would move: 'service_recent.log' -> 'Miscellaneous/service_recent.log'
+[INFO] [2026-10-24 02:01:25] [DRY-RUN] Would move: 'todo.txt' -> 'Documents/todo.txt'
+[INFO] [2026-10-24 02:01:25] File organization completed. Total files processed: 20
+[INFO] [2026-10-24 02:01:25] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:01:26] Scanning '/tmp/test_suite-7rCkH3/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:01:26] Moved: 'analytics_script.py' -> 'Code/analytics_script.py'
+[INFO] [2026-10-24 02:01:26] Moved: 'app_active.log' -> 'Miscellaneous/app_active.log'
+[INFO] [2026-10-24 02:01:27] Moved: 'architecture_diagram.png' -> 'Images/architecture_diagram.png'
+[INFO] [2026-10-24 02:01:27] Moved: 'backup_stub.tar.gz' -> 'Archives/backup_stub.tar.gz'
+[INFO] [2026-10-24 02:01:27] Moved: 'config.json' -> 'Code/config.json'
+[INFO] [2026-10-24 02:01:28] Moved: 'data_export.csv' -> 'Documents/data_export.csv'
+[INFO] [2026-10-24 02:01:28] Moved: 'demo_clip.mp4' -> 'Media/demo_clip.mp4'
+[INFO] [2026-10-24 02:01:28] Moved: 'helper.sh' -> 'Code/helper.sh'
+[INFO] [2026-10-24 02:01:29] Moved: 'icon_vector.svg' -> 'Images/icon_vector.svg'
+[INFO] [2026-10-24 02:01:29] Moved: 'lecture_notes.docx' -> 'Documents/lecture_notes.docx'
+[INFO] [2026-10-24 02:01:29] Moved: 'legacy_audit_archive.log' -> 'Miscellaneous/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:01:30] Moved: 'main.c' -> 'Code/main.c'
+[INFO] [2026-10-24 02:01:30] Moved: 'old_dataset.zip' -> 'Archives/old_dataset.zip'
+[INFO] [2026-10-24 02:01:30] Moved: 'oversized_transaction.log' -> 'Miscellaneous/oversized_transaction.log'
+[INFO] [2026-10-24 02:01:31] Moved: 'podcast_recording.mp3' -> 'Media/podcast_recording.mp3'
+[INFO] [2026-10-24 02:01:31] Moved: 'project_spec.md' -> 'Documents/project_spec.md'
+[INFO] [2026-10-24 02:01:31] Moved: 'quarterly_report.pdf' -> 'Documents/quarterly_report.pdf'
+[INFO] [2026-10-24 02:01:31] Moved: 'screenshot_mock.jpg' -> 'Images/screenshot_mock.jpg'
+[INFO] [2026-10-24 02:01:32] Moved: 'service_recent.log' -> 'Miscellaneous/service_recent.log'
+[INFO] [2026-10-24 02:01:32] Moved: 'todo.txt' -> 'Documents/todo.txt'
+[INFO] [2026-10-24 02:01:32] File organization completed. Total files processed: 20
+[INFO] [2026-10-24 02:01:32] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:01:33] Scanning '/tmp/test_suite-7rCkH3/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:01:34] Moved: 'quarterly_report.pdf' -> 'Documents/quarterly_report_20261024020133.pdf'
+[INFO] [2026-10-24 02:01:34] File organization completed. Total files processed: 1
+[INFO] [2026-10-24 02:01:34] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:01:35] Scanning '/tmp/test_suite-7rCkH3/org_test_dir' for .log files (Thresholds: >5 days, >1 MB)...
+[INFO] [2026-10-24 02:01:35] Quarantine staging enabled: '/tmp/test_suite-7rCkH3/quarantine_dir'
+[INFO] [2026-10-24 02:01:35] Quarantined stale log (30 days old): 'legacy_audit_archive.log' -> '/tmp/test_suite-7rCkH3/quarantine_dir/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:01:35] Compressing oversized log (1 MB): 'oversized_transaction.log'
+[INFO] [2026-10-24 02:01:36] Log cleaning finished. Stale logs purged/quarantined: 1, Oversized logs compressed: 1
+[INFO] [2026-10-24 02:01:36] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:01:37] Reading CSV file: /d/OS Project/examples/users.csv (Dry-run: true, Deprovision: false)...
+[INFO] [2026-10-24 02:01:37] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 02:01:37] Processing user: 'alice' [Group: developers, Shell: /bin/bash, Home: /home/alice, Sudo: true]
+[INFO] [2026-10-24 02:01:37] [DRY-RUN] Primary group 'developers' does not exist. Would execute: groupadd developers
+[INFO] [2026-10-24 02:01:37] [DRY-RUN] Would execute: useradd -m -g 'developers' -s '/bin/bash' -d '/home/alice' 'alice'
+[INFO] [2026-10-24 02:01:37] [DRY-RUN] Would configure initial password for 'alice'
+[INFO] [2026-10-24 02:01:37] [DRY-RUN] Would grant administrative/sudo privileges to 'alice'
+[INFO] [2026-10-24 02:01:37] [DRY-RUN] Would set directory permissions (chmod 750 '/home/alice')
+[INFO] [2026-10-24 02:01:38] Processing user: 'bob' [Group: testers, Shell: /bin/bash, Home: /home/bob, Sudo: false]
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Primary group 'testers' does not exist. Would execute: groupadd testers
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Would execute: useradd -m -g 'testers' -s '/bin/bash' -d '/home/bob' 'bob'
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Would configure initial password for 'bob'
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Would set directory permissions (chmod 750 '/home/bob')
+[INFO] [2026-10-24 02:01:38] Processing user: 'charlie' [Group: devops, Shell: /bin/bash, Home: /home/charlie, Sudo: true]
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Primary group 'devops' does not exist. Would execute: groupadd devops
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Would execute: useradd -m -g 'devops' -s '/bin/bash' -d '/home/charlie' 'charlie'
+[INFO] [2026-10-24 02:01:38] [DRY-RUN] Would configure initial password for 'charlie'
+[INFO] [2026-10-24 02:01:39] [DRY-RUN] Would grant administrative/sudo privileges to 'charlie'
+[INFO] [2026-10-24 02:01:39] [DRY-RUN] Would set directory permissions (chmod 750 '/home/charlie')
+[INFO] [2026-10-24 02:01:39] User provisioning task completed.
+[ERROR] [2026-10-24 02:01:40] Missing required --csv parameter.
+[INFO] [2026-10-24 02:01:41] Reading CSV file: /tmp/test_suite-7rCkH3/bad.csv (Dry-run: true, Deprovision: false)...
+[WARN] [2026-10-24 02:01:41] Line 1: Incomplete row data: 'invalid_row_without_commas'. Skipping.
+[INFO] [2026-10-24 02:01:42] Reading CSV file: /d/OS Project/examples/users.csv (Dry-run: true, Deprovision: true)...
+[INFO] [2026-10-24 02:01:42] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 02:01:43] Deprovisioning account for: 'alice'
+[INFO] [2026-10-24 02:01:43] User 'alice' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:01:43] Deprovisioning account for: 'bob'
+[INFO] [2026-10-24 02:01:43] User 'bob' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:01:43] Deprovisioning account for: 'charlie'
+[INFO] [2026-10-24 02:01:43] User 'charlie' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:01:43] User provisioning task completed.
+[ERROR] [2026-10-24 02:02:02] Unknown command: 'non_existent_command'
+[INFO] [2026-10-24 02:02:08] Running monitor diagnostic in DRY-RUN mode...
+[WARN] [2026-10-24 02:02:11] [DRY-RUN] Threshold breach detected. Simulated alert: Resource threshold breach on MOSTAFIZ - CPU: 100.0%, MEM: 79%, DISK: 64%
+[INFO] [2026-10-24 02:02:12] Preparing L0 backup of '/tmp/test_suite-r7Yb46/backup_src' -> '/tmp/test_suite-r7Yb46/backup_dest/backup_backup_src_L0_20261024_020212.tar.gz'...
+[INFO] [2026-10-24 02:02:12] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:02:13] Backup created successfully: backup_backup_src_L0_20261024_020212.tar.gz (Size: 211 bytes)
+[INFO] [2026-10-24 02:02:13] SHA-256 Registered: 72e5240b8d273beec0e62c9cf3ff5990e924f519556ad897115cf81de829d997
+[INFO] [2026-10-24 02:02:13] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:02:13] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:02:13] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:02:13] Backup job finished successfully.
+[INFO] [2026-10-24 02:02:14] Verifying archive: backup_backup_src_L0_20261024_020212.tar.gz...
+[INFO] [2026-10-24 02:02:14] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:02:14] Computed SHA-256: 72e5240b8d273beec0e62c9cf3ff5990e924f519556ad897115cf81de829d997
+[INFO] [2026-10-24 02:02:15] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-r7Yb46/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:02:15] Verification PASSED for backup_backup_src_L0_20261024_020212.tar.gz.
+[INFO] [2026-10-24 02:02:17] Preparing L1 backup of '/tmp/test_suite-r7Yb46/backup_src' -> '/tmp/test_suite-r7Yb46/backup_dest/backup_backup_src_L1_20261024_020217.tar.gz'...
+[INFO] [2026-10-24 02:02:17] Creating Level-1 Incremental Backup...
+[INFO] [2026-10-24 02:02:17] Backup created successfully: backup_backup_src_L1_20261024_020217.tar.gz (Size: 210 bytes)
+[INFO] [2026-10-24 02:02:17] SHA-256 Registered: 4bdbd8bcb662717cef882998dd95217603b98645583df21cfd10f326448c64ac
+[INFO] [2026-10-24 02:02:17] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:02:17] Found 1 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:02:17] Backup count (1) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:02:17] Backup job finished successfully.
+[INFO] [2026-10-24 02:02:18] Verifying archive: backup_backup_src_L1_20261024_020217.tar.gz...
+[INFO] [2026-10-24 02:02:19] Tar archive internal structure: VALID
+[INFO] [2026-10-24 02:02:19] Computed SHA-256: 4bdbd8bcb662717cef882998dd95217603b98645583df21cfd10f326448c64ac
+[INFO] [2026-10-24 02:02:19] SHA-256 Manifest Match: VALID (Matches /tmp/test_suite-r7Yb46/backup_dest/SHA256SUMS)
+[INFO] [2026-10-24 02:02:19] Verification PASSED for backup_backup_src_L1_20261024_020217.tar.gz.
+[INFO] [2026-10-24 02:02:20] Preparing L0 backup of '/tmp/test_suite-r7Yb46/backup_src' -> '/tmp/test_suite-r7Yb46/dry_dest/backup_backup_src_L0_20261024_020220.tar.gz'...
+[INFO] [2026-10-24 02:02:20] Creating Level-0 (Full) Base Backup...
+[INFO] [2026-10-24 02:02:20] [DRY-RUN] Would create archive: /tmp/test_suite-r7Yb46/dry_dest/backup_backup_src_L0_20261024_020220.tar.gz
+[INFO] [2026-10-24 02:02:20] [DRY-RUN] Engine: GNU Tar (Snapshot SNAR: /tmp/test_suite-r7Yb46/dry_dest/.snapshot.snar)
+[INFO] [2026-10-24 02:02:20] [DRY-RUN] Would compute SHA-256 and register in /tmp/test_suite-r7Yb46/dry_dest/SHA256SUMS
+[INFO] [2026-10-24 02:02:20] Evaluating retention policies (Limit: 5 backup chains)...
+[INFO] [2026-10-24 02:02:20] Found 0 Level-0 base backup chain(s).
+[INFO] [2026-10-24 02:02:20] Backup count (0) is within retention limit (5). No rotation needed.
+[INFO] [2026-10-24 02:02:20] Backup job finished successfully.
+[INFO] [2026-10-24 02:02:22] Scanning '/tmp/test_suite-r7Yb46/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:02:22] [DRY-RUN] Would move: 'analytics_script.py' -> 'Code/analytics_script.py'
+[INFO] [2026-10-24 02:02:22] [DRY-RUN] Would move: 'app_active.log' -> 'Miscellaneous/app_active.log'
+[INFO] [2026-10-24 02:02:22] [DRY-RUN] Would move: 'architecture_diagram.png' -> 'Images/architecture_diagram.png'
+[INFO] [2026-10-24 02:02:22] [DRY-RUN] Would move: 'backup_stub.tar.gz' -> 'Archives/backup_stub.tar.gz'
+[INFO] [2026-10-24 02:02:23] [DRY-RUN] Would move: 'config.json' -> 'Code/config.json'
+[INFO] [2026-10-24 02:02:23] [DRY-RUN] Would move: 'data_export.csv' -> 'Documents/data_export.csv'
+[INFO] [2026-10-24 02:02:23] [DRY-RUN] Would move: 'demo_clip.mp4' -> 'Media/demo_clip.mp4'
+[INFO] [2026-10-24 02:02:23] [DRY-RUN] Would move: 'helper.sh' -> 'Code/helper.sh'
+[INFO] [2026-10-24 02:02:23] [DRY-RUN] Would move: 'icon_vector.svg' -> 'Images/icon_vector.svg'
+[INFO] [2026-10-24 02:02:24] [DRY-RUN] Would move: 'lecture_notes.docx' -> 'Documents/lecture_notes.docx'
+[INFO] [2026-10-24 02:02:24] [DRY-RUN] Would move: 'legacy_audit_archive.log' -> 'Miscellaneous/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:02:24] [DRY-RUN] Would move: 'main.c' -> 'Code/main.c'
+[INFO] [2026-10-24 02:02:24] [DRY-RUN] Would move: 'old_dataset.zip' -> 'Archives/old_dataset.zip'
+[INFO] [2026-10-24 02:02:25] [DRY-RUN] Would move: 'oversized_transaction.log' -> 'Miscellaneous/oversized_transaction.log'
+[INFO] [2026-10-24 02:02:25] [DRY-RUN] Would move: 'podcast_recording.mp3' -> 'Media/podcast_recording.mp3'
+[INFO] [2026-10-24 02:02:25] [DRY-RUN] Would move: 'project_spec.md' -> 'Documents/project_spec.md'
+[INFO] [2026-10-24 02:02:25] [DRY-RUN] Would move: 'quarterly_report.pdf' -> 'Documents/quarterly_report.pdf'
+[INFO] [2026-10-24 02:02:25] [DRY-RUN] Would move: 'screenshot_mock.jpg' -> 'Images/screenshot_mock.jpg'
+[INFO] [2026-10-24 02:02:26] [DRY-RUN] Would move: 'service_recent.log' -> 'Miscellaneous/service_recent.log'
+[INFO] [2026-10-24 02:02:26] [DRY-RUN] Would move: 'todo.txt' -> 'Documents/todo.txt'
+[INFO] [2026-10-24 02:02:26] File organization completed. Total files processed: 20
+[INFO] [2026-10-24 02:02:26] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:02:27] Scanning '/tmp/test_suite-r7Yb46/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:02:27] Moved: 'analytics_script.py' -> 'Code/analytics_script.py'
+[INFO] [2026-10-24 02:02:27] Moved: 'app_active.log' -> 'Miscellaneous/app_active.log'
+[INFO] [2026-10-24 02:02:28] Moved: 'architecture_diagram.png' -> 'Images/architecture_diagram.png'
+[INFO] [2026-10-24 02:02:28] Moved: 'backup_stub.tar.gz' -> 'Archives/backup_stub.tar.gz'
+[INFO] [2026-10-24 02:02:28] Moved: 'config.json' -> 'Code/config.json'
+[INFO] [2026-10-24 02:02:29] Moved: 'data_export.csv' -> 'Documents/data_export.csv'
+[INFO] [2026-10-24 02:02:29] Moved: 'demo_clip.mp4' -> 'Media/demo_clip.mp4'
+[INFO] [2026-10-24 02:02:29] Moved: 'helper.sh' -> 'Code/helper.sh'
+[INFO] [2026-10-24 02:02:30] Moved: 'icon_vector.svg' -> 'Images/icon_vector.svg'
+[INFO] [2026-10-24 02:02:30] Moved: 'lecture_notes.docx' -> 'Documents/lecture_notes.docx'
+[INFO] [2026-10-24 02:02:30] Moved: 'legacy_audit_archive.log' -> 'Miscellaneous/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:02:31] Moved: 'main.c' -> 'Code/main.c'
+[INFO] [2026-10-24 02:02:31] Moved: 'old_dataset.zip' -> 'Archives/old_dataset.zip'
+[INFO] [2026-10-24 02:02:31] Moved: 'oversized_transaction.log' -> 'Miscellaneous/oversized_transaction.log'
+[INFO] [2026-10-24 02:02:32] Moved: 'podcast_recording.mp3' -> 'Media/podcast_recording.mp3'
+[INFO] [2026-10-24 02:02:32] Moved: 'project_spec.md' -> 'Documents/project_spec.md'
+[INFO] [2026-10-24 02:02:32] Moved: 'quarterly_report.pdf' -> 'Documents/quarterly_report.pdf'
+[INFO] [2026-10-24 02:02:33] Moved: 'screenshot_mock.jpg' -> 'Images/screenshot_mock.jpg'
+[INFO] [2026-10-24 02:02:33] Moved: 'service_recent.log' -> 'Miscellaneous/service_recent.log'
+[INFO] [2026-10-24 02:02:33] Moved: 'todo.txt' -> 'Documents/todo.txt'
+[INFO] [2026-10-24 02:02:34] File organization completed. Total files processed: 20
+[INFO] [2026-10-24 02:02:34] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:02:34] Scanning '/tmp/test_suite-r7Yb46/org_test_dir' for files to organize...
+[INFO] [2026-10-24 02:02:35] Moved: 'quarterly_report.pdf' -> 'Documents/quarterly_report_20261024020235.pdf'
+[INFO] [2026-10-24 02:02:35] File organization completed. Total files processed: 1
+[INFO] [2026-10-24 02:02:35] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:02:36] Scanning '/tmp/test_suite-r7Yb46/org_test_dir' for .log files (Thresholds: >5 days, >1 MB)...
+[INFO] [2026-10-24 02:02:36] Quarantine staging enabled: '/tmp/test_suite-r7Yb46/quarantine_dir'
+[INFO] [2026-10-24 02:02:37] Quarantined stale log (30 days old): 'legacy_audit_archive.log' -> '/tmp/test_suite-r7Yb46/quarantine_dir/legacy_audit_archive.log'
+[INFO] [2026-10-24 02:02:37] Compressing oversized log (1 MB): 'oversized_transaction.log'
+[INFO] [2026-10-24 02:02:37] Log cleaning finished. Stale logs purged/quarantined: 1, Oversized logs compressed: 1
+[INFO] [2026-10-24 02:02:37] Organizer & Log Cleaner finished successfully.
+[INFO] [2026-10-24 02:02:38] Reading CSV file: /d/OS Project/examples/users.csv (Dry-run: true, Deprovision: false)...
+[INFO] [2026-10-24 02:02:39] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 02:02:39] Processing user: 'alice' [Group: developers, Shell: /bin/bash, Home: /home/alice, Sudo: true]
+[INFO] [2026-10-24 02:02:39] [DRY-RUN] Primary group 'developers' does not exist. Would execute: groupadd developers
+[INFO] [2026-10-24 02:02:39] [DRY-RUN] Would execute: useradd -m -g 'developers' -s '/bin/bash' -d '/home/alice' 'alice'
+[INFO] [2026-10-24 02:02:39] [DRY-RUN] Would configure initial password for 'alice'
+[INFO] [2026-10-24 02:02:39] [DRY-RUN] Would grant administrative/sudo privileges to 'alice'
+[INFO] [2026-10-24 02:02:39] [DRY-RUN] Would set directory permissions (chmod 750 '/home/alice')
+[INFO] [2026-10-24 02:02:39] Processing user: 'bob' [Group: testers, Shell: /bin/bash, Home: /home/bob, Sudo: false]
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Primary group 'testers' does not exist. Would execute: groupadd testers
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would execute: useradd -m -g 'testers' -s '/bin/bash' -d '/home/bob' 'bob'
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would configure initial password for 'bob'
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would set directory permissions (chmod 750 '/home/bob')
+[INFO] [2026-10-24 02:02:40] Processing user: 'charlie' [Group: devops, Shell: /bin/bash, Home: /home/charlie, Sudo: true]
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Primary group 'devops' does not exist. Would execute: groupadd devops
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would execute: useradd -m -g 'devops' -s '/bin/bash' -d '/home/charlie' 'charlie'
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would configure initial password for 'charlie'
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would grant administrative/sudo privileges to 'charlie'
+[INFO] [2026-10-24 02:02:40] [DRY-RUN] Would set directory permissions (chmod 750 '/home/charlie')
+[INFO] [2026-10-24 02:02:40] User provisioning task completed.
+[ERROR] [2026-10-24 02:02:41] Missing required --csv parameter.
+[INFO] [2026-10-24 02:02:42] Reading CSV file: /tmp/test_suite-r7Yb46/bad.csv (Dry-run: true, Deprovision: false)...
+[WARN] [2026-10-24 02:02:42] Line 1: Incomplete row data: 'invalid_row_without_commas'. Skipping.
+[INFO] [2026-10-24 02:02:43] Reading CSV file: /d/OS Project/examples/users.csv (Dry-run: true, Deprovision: true)...
+[INFO] [2026-10-24 02:02:43] Validated CSV header: username,group,shell,home_dir,sudo_flag,initial_password
+[INFO] [2026-10-24 02:02:43] Deprovisioning account for: 'alice'
+[INFO] [2026-10-24 02:02:44] User 'alice' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:02:44] Deprovisioning account for: 'bob'
+[INFO] [2026-10-24 02:02:44] User 'bob' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:02:44] Deprovisioning account for: 'charlie'
+[INFO] [2026-10-24 02:02:44] User 'charlie' does not exist. Nothing to remove.
+[INFO] [2026-10-24 02:02:44] User provisioning task completed.
