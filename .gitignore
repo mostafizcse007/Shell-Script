@@ -1,0 +1,33 @@
+# ==============================================================================
+# OS Admin CLI Suite: Git Ignore
+# ==============================================================================
+
+# Application & incident logs (preserve directory structure via .gitkeep)
+logs/*.log
+!logs/.gitkeep
+*.log
+*.log.gz
+
+# Backup archives, metadata, and snapshot state
+*.tar.gz
+*.snar
+.snapshot.snar
+.last_backup_mtime
+
+# Temporary testing directories & sandbox files
+test_dest/
+test_bk/
+quarantine_dir/
+org_test_dir/
+test_sandbox/
+tmp/
+*.tmp
+
+# Dynamic test fixtures
+examples/sample_dirty_dir/
+
+# System and Editor metadata
+.DS_Store
+Thumbs.db
+*.swp
+*~

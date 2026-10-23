@@ -1,0 +1,51 @@
+name: CI - Shell Scripting Standards & Test Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Lint & Test Suite (Ubuntu)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: |
+          chmod +x sysadmin.sh demo.sh modules/*.sh lib/*.sh examples/*.sh tests/*.sh
+
+      - name: Syntax Check (bash -n)
+        run: |
+          echo "Verifying syntax across all shell scripts..."
+          find . -name "*.sh" -not -path "./.git/*" -exec bash -n {} +
+
+      - name: Verify Coding Standards (Shebang & Strict Mode)
+        run: |
+          echo "Checking portable shebangs (#!/usr/bin/env bash)..."
+          MISSING_SHEBANG=$(grep -rL '#!/usr/bin/env bash' --include='*.sh' --exclude-dir='.git' .)
+          if [ -n "$MISSING_SHEBANG" ]; then
+            echo "Error: Files missing '#!/usr/bin/env bash':"
+            echo "$MISSING_SHEBANG"
+            exit 1
+          fi
+
+          echo "Checking strict mode (set -euo pipefail)..."
+          MISSING_STRICT=$(grep -rL 'set -euo pipefail' --include='*.sh' --exclude-dir='.git' .)
+          if [ -n "$MISSING_STRICT" ]; then
+            echo "Error: Files missing 'set -euo pipefail':"
+            echo "$MISSING_STRICT"
+            exit 1
+          fi
+
+      - name: Run Automated Test Suite (30 Assertions)
+        run: |
+          bash tests/test_suite.sh
+
+      - name: Run Automated Evaluation Demo
+        run: |
+          bash demo.sh --auto
